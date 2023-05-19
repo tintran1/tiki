@@ -1,0 +1,177 @@
+.main {
+    background-color: rgb(224, 224, 224, 0.15);
+
+    &__navbar {
+        & a {
+            color: #0055aa;
+            font-size: 13px;
+        }
+
+        & p {
+            font-size: 13px;
+        }
+    }
+
+    &__product {
+        &--img-video {
+            width: 450px;
+
+            & video {
+                width: 450px;
+                height: 450px;
+            }
+
+            &-slider {
+                position: relative;
+                width: 100%;
+
+                &:hover {
+                    .main__shopeemall--slider-prev {
+                        left: -25px;
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    .main__shopeemall--slider-next {
+                        right: -25px;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                &-prev {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    transform: translateY(-50%);
+                    z-index: 1000;
+                    color: #fff;
+                }
+
+                &-next {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    width: 20px;
+                    height: 20px;
+                    transform: translateY(-50%);
+                    z-index: 1000;
+                    color: #fff;
+
+                }
+
+                &-main {
+                    position: relative;
+                    transition: transform 0.4s linear;
+
+                    &-wrapper {
+                        width: 200% !important;
+                        overflow: hidden;
+                        position: relative;
+                    }
+
+                    &-item {
+                        width: 84px;
+                        height: 84px;
+                        font-size: 14px;
+                        color: #d0011b !important;
+                    }
+                }
+            }
+        }
+
+        &--info {
+            width: 665px;
+
+            &-title {
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            &-sold {
+                background: #fafafa;
+
+                & span {
+                    font-size: 30px;
+                    color: #ee4d2d;
+                }
+            }
+
+            &-action {
+                &-bag {
+                    background: rgba(255, 87, 34, .1);
+                    color: #ee4d2d;
+                    border: 1px solid #ee4d2d;
+
+                    &:hover {
+                        background: rgba(255, 87, 34, .05);
+                        color: #ee4d2d;
+                        border: 1px solid #ee4d2d;
+                    }
+                }
+
+                &-buy {
+                    background: #ee4d2d;
+                    color: #fff;
+                    border: 1px solid #ee4d2d;
+
+                    &:hover {
+                        background: #ee4d2d;
+                        opacity: 0.7;
+                        color: #fff;
+                        border: 1px solid #ee4d2d;
+                    }
+                }
+            }
+        }
+    }
+
+    &__shop {
+        &--info {
+            &-avatar {
+                overflow: hidden;
+                width: 80px;
+                height: 80px;
+            }
+
+            &-name {
+                &-action {
+                    &-chat {
+                        background: rgba(255, 87, 34, .1);
+                        color: #ee4d2d;
+                        border: 1px solid #ee4d2d;
+                        font-size: 14px;
+
+                        &:hover {
+                            background: rgba(255, 87, 34, .05);
+                            color: #ee4d2d;
+                            border: 1px solid #ee4d2d;
+                        }
+                    }
+
+                    &-shop {
+                        background: #fff;
+                        color: #555;
+                        border: 1px solid;
+                        font-size: 14px;
+
+                        &:hover {
+                            background: #fff;
+                            color: #555;
+                            opacity: 0.7;
+                            border: 1px solid ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
